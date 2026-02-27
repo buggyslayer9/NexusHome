@@ -1,0 +1,36 @@
+# NexusHome OS — Central Configuration
+# Any change here ripples through the ISO build and the Web/Mobile UI.
+
+system:
+  name: "NexusHome OS"
+  version: "1.0.0-beta"
+  hostname: "nexus-server"
+  locale: "en-US" # Default: English. UI supports AR/EN toggle.
+
+branding:
+  primary_color: "#775BF4" # ElegantFin Purple
+  secondary_color: "#1d2635" # ElegantFin Navy
+  accent_glow: "rgba(119, 91, 244, 0.4)"
+  glass_blur: "20px"
+
+network:
+  http_port: 80
+  api_port: 3000
+  rdp_port: 8080
+  cloudflare_tunnel: true
+
+docker:
+  storage_path: "/mnt/storage"
+  config_path: "/srv/nexus/apps"
+  memory_limit_default: "512m"
+  critical_services_reservation: "1g" # Guaranteed RAM for RDP/Athan
+
+apps:
+  jellyfin:
+    enabled: true
+    memory_limit: "2g"
+  athan_daemon:
+    enabled: true
+    priority: "high"
+  marketplace:
+    enabled: true

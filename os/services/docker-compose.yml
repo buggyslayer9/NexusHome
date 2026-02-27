@@ -1,0 +1,42 @@
+# NexusHome OS — Marketplace Core Template
+# Optimized for Intel i5-3rd Gen / 8GB RAM
+
+services:
+  jellyfin:
+    image: jellyfin/jellyfin:latest
+    container_name: nexus-jellyfin
+    restart: unless-stopped
+    volumes:
+      - ${STORAGE_PATH}:/data
+      - ${CONFIG_PATH}/jellyfin:/config
+    deploy:
+      resources:
+        limits:
+          memory: 2G
+        reservations:
+          memory: 512M
+    network_mode: host
+
+  athan-daemon:
+    build: ./athan
+    container_name: nexus-athan
+    restart: always
+    privileged: true
+    volumes:
+      - /run/user/1000/pulse:/run/user/1000/pulse
+    deploy:
+      resources:
+        reservations:
+          memory: 256M
+    # Athan Priority logic: triggers 'pactl' volume ducking
+
+  guacamole:
+    image: abezat/guacamole:latest
+    container_name: nexus-rdp
+    restart: always
+    deploy:
+      resources:
+        reservations:
+          memory: 1G # Critical Service: RDP must not be killed
+    ports:
+      - "8080:8080"
