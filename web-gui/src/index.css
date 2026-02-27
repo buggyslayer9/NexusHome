@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        @apply bg-navy text-gray-100 font-sans antialiased;
+        min-height: 100vh;
+        background:
+            radial-gradient(ellipse 80% 60% at 60% -20%, rgba(119, 91, 244, 0.18) 0%, transparent 70%),
+            radial-gradient(ellipse 50% 40% at -10% 80%, rgba(119, 91, 244, 0.10) 0%, transparent 60%),
+            linear-gradient(175deg, #111827 0%, #1d2635 100%);
+        background-attachment: fixed;
+    }
+
+    [dir="rtl"] {
+        font-family: 'Noto Kufi Arabic', 'Inter', sans-serif;
+    }
+}
+
+@layer components {
+    .glass {
+        backdrop-filter: blur(20px) saturate(180%);
+        background: rgba(29, 38, 53, 0.40);
+        border: 1px solid rgba(255, 255, 255, 0.10);
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    }
+
+    .glass-card {
+        @apply glass rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1;
+    }
+
+    .nexus-btn {
+        @apply px-6 py-2.5 rounded-xl font-semibold transition-all duration-200 flex items-center gap-2;
+    }
+
+    .nexus-btn-primary {
+        @apply nexus-btn bg-primary text-white shadow-glow hover:shadow-glow-strong hover:scale-[1.02] active:scale-[0.98];
+    }
+
+    .nav-item {
+        @apply flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium text-gray-400 transition-all cursor-pointer hover:bg-white/5;
+    }
+
+    .nav-item.active {
+        @apply text-white bg-primary/20 border border-primary/30;
+    }
+
+    .icon {
+        font-family: 'Material Symbols Rounded';
+        font-size: 1.25rem;
+    }
+
+    .liquid-blob {
+        @apply absolute pointer-events-none rounded-full opacity-20 blur-3xl animate-liquid-morph bg-primary;
+    }
+}
