@@ -18,23 +18,23 @@ const CONTINUE = [
 ]
 
 const TRENDING = [
-    { id: 20, title: 'Godzilla Minus One', img: 'https://image.tmdb.org/t/p/w400/hkxxMIGaiCTmrEArK7J56rvbJqd.jpg' },
-    { id: 21, title: 'Poor Things', img: 'https://image.tmdb.org/t/p/w400/kCGlIMHnOm8JPXNGFlkFqDjJFuk.jpg' },
-    { id: 22, title: 'Killers of the Flower Moon', img: 'https://image.tmdb.org/t/p/w400/dB6Krk806zeqd917HIxyentriBw.jpg' },
-    { id: 23, title: 'Anatomy of a Fall', img: 'https://image.tmdb.org/t/p/w400/qGGEKTiN9U06SAOLM8h2Kq6B5rk.jpg' },
-    { id: 24, title: 'Past Lives', img: 'https://image.tmdb.org/t/p/w400/k3waqVXsnvf0LgFhGp02ztV4bCN.jpg' },
-    { id: 25, title: 'Saltburn', img: 'https://image.tmdb.org/t/p/w400/qjhahqZcsn6rJqtByZryXBkHqwv.jpg' },
-    { id: 26, title: 'Society of the Snow', img: 'https://image.tmdb.org/t/p/w400/2e853FDVSIso600RqAMunPxiZjq.jpg' },
-    { id: 27, title: 'Fallen Leaves', img: 'https://image.tmdb.org/t/p/w400/thQjvXFEDxoq3xNNKOFTuaZcJj4.jpg' },
+    { id: 20, title: 'Godzilla Minus One', img: 'https://image.tmdb.org/t/p/w500/hkxxMIGaiCTmrEArK7J56rvbJqd.jpg' },
+    { id: 21, title: 'Poor Things', img: 'https://image.tmdb.org/t/p/w500/kCGlIMHnOm8JPXNGFlkFqDjJFuk.jpg' },
+    { id: 22, title: 'Killers of the Flower Moon', img: 'https://image.tmdb.org/t/p/w500/dB6Krk806zeqd917HIxyentriBw.jpg' },
+    { id: 23, title: 'Anatomy of a Fall', img: 'https://image.tmdb.org/t/p/w500/qGGEKTiN9U06SAOLM8h2Kq6B5rk.jpg' },
+    { id: 24, title: 'Past Lives', img: 'https://image.tmdb.org/t/p/w500/k3waqVXsnvf0LgFhGp02ztV4bCN.jpg' },
+    { id: 25, title: 'Saltburn', img: 'https://image.tmdb.org/t/p/w500/qjhahqZcsn6rJqtByZryXBkHqwv.jpg' },
+    { id: 26, title: 'Society of the Snow', img: 'https://image.tmdb.org/t/p/w500/2e853FDVSIso600RqAMunPxiZjq.jpg' },
+    { id: 27, title: 'Fallen Leaves', img: 'https://image.tmdb.org/t/p/w500/thQjvXFEDxoq3xNNKOFTuaZcJj4.jpg' },
 ]
 
 const RECENTLY = [
-    { id: 30, title: 'The Zone of Interest', img: 'https://image.tmdb.org/t/p/w400/hUu9zyZmKDWfZLBFAJkXBaVzMon.jpg' },
-    { id: 31, title: 'All of Us Strangers', img: 'https://image.tmdb.org/t/p/w400/uB7CtWs7LGa5ePXiogVQwqvU6Kc.jpg' },
-    { id: 32, title: 'Dune: Part Two', img: 'https://image.tmdb.org/t/p/w400/1pdfLvkbY9ohJlCjQH2CZjjYVvJ.jpg' },
-    { id: 33, title: 'The Holdovers', img: 'https://image.tmdb.org/t/p/w400/VelWPhVMzDwhXqJMQNBEzTMSNAt.jpg' },
-    { id: 34, title: 'May December', img: 'https://image.tmdb.org/t/p/w400/hA2ple9q4qnwxp3hKVNhroipsir.jpg' },
-    { id: 35, title: 'Dream Scenario', img: 'https://image.tmdb.org/t/p/w400/imekS7f1OuHyUP2LAiTEM0zBzUz.jpg' },
+    { id: 30, title: 'The Zone of Interest', img: 'https://image.tmdb.org/t/p/w500/hUu9zyZmKDWfZLBFAJkXBaVzMon.jpg' },
+    { id: 31, title: 'All of Us Strangers', img: 'https://image.tmdb.org/t/p/w500/uB7CtWs7LGa5ePXiogVQwqvU6Kc.jpg' },
+    { id: 32, title: 'Dune: Part Two', img: 'https://image.tmdb.org/t/p/w500/1pdfLvkbY9ohJlCjQH2CZjjYVvJ.jpg' },
+    { id: 33, title: 'The Holdovers', img: 'https://image.tmdb.org/t/p/w500/VelWPhVMzDwhXqJMQNBEzTMSNAt.jpg' },
+    { id: 34, title: 'May December', img: 'https://image.tmdb.org/t/p/w500/hA2ple9q4qnwxp3hKVNhroipsir.jpg' },
+    { id: 35, title: 'Dream Scenario', img: 'https://image.tmdb.org/t/p/w500/imekS7f1OuHyUP2LAiTEM0zBzUz.jpg' },
 ]
 
 /* ── Section Row Component ───────────────────────────── */
@@ -86,7 +86,7 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-r from-[#0a0e1a]/60 via-transparent to-[#0a0e1a]/60" />
 
                 {/* Hero content */}
-                <div className="absolute bottom-16 left-12 right-12 max-w-2xl animate-slide-in-up" key={heroIdx}>
+                <div className="absolute bottom-32 left-12 right-12 max-w-2xl animate-slide-in-up" key={heroIdx}>
                     <h1 className="text-white text-6xl font-black tracking-tight mb-3 drop-shadow-2xl">{hero.title}</h1>
                     <p className="text-gray-300 text-lg mb-6">{hero.sub}</p>
                     <div className="flex gap-3">
@@ -112,7 +112,7 @@ export default function Home() {
             <div className="relative -mt-20 z-10 px-6 lg:px-12 pb-16 space-y-12">
 
                 {/* Continue Watching */}
-                <SectionRow title={t('continueWatching') || 'Continue Watching'}>
+                <SectionRow title="Continue Watching">
                     {CONTINUE.map((item, i) => (
                         <Link to={`/movie/${item.id}`} key={item.id}
                             className="backdrop-card w-72 h-40 flex-shrink-0 animate-slide-in-up" style={{ animationDelay: `${i * 0.08}s` }}>

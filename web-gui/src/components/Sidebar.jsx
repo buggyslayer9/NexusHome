@@ -21,10 +21,12 @@ export default function Sidebar({ open, onClose }) {
             {/* Mobile backdrop */}
             {open && <div className="fixed inset-0 z-30 bg-black/60 backdrop-blur-sm lg:hidden" onClick={onClose} />}
 
+            {/* Desktop spacer to prevent main content from hiding under collapsed sidebar */}
+            <div className="hidden lg:block w-[72px] flex-shrink-0" />
+
             <aside className={clsx(
                 'fixed inset-y-0 left-0 z-40 w-[72px] hover:w-56 group/nav glass flex flex-col py-6',
                 'transition-all duration-500 ease-out overflow-hidden',
-                'lg:static',
                 open ? 'translate-x-0 w-56' : '-translate-x-full lg:translate-x-0'
             )}>
                 {/* Logo */}

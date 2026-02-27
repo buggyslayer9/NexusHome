@@ -2,18 +2,18 @@ import React, { useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 
 const ALL_MEDIA = [
-    { id: 20, title: 'Godzilla Minus One', year: 2023, img: 'https://image.tmdb.org/t/p/w400/hkxxMIGaiCTmrEArK7J56rvbJqd.jpg' },
-    { id: 21, title: 'Poor Things', year: 2023, img: 'https://image.tmdb.org/t/p/w400/kCGlIMHnOm8JPXNGFlkFqDjJFuk.jpg' },
-    { id: 22, title: 'Killers of the Flower Moon', year: 2023, img: 'https://image.tmdb.org/t/p/w400/dB6Krk806zeqd917HIxyentriBw.jpg' },
-    { id: 23, title: 'Anatomy of a Fall', year: 2023, img: 'https://image.tmdb.org/t/p/w400/qGGEKTiN9U06SAOLM8h2Kq6B5rk.jpg' },
-    { id: 24, title: 'Oppenheimer', year: 2023, img: 'https://image.tmdb.org/t/p/w400/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg' },
-    { id: 25, title: 'Saltburn', year: 2023, img: 'https://image.tmdb.org/t/p/w400/qjhahqZcsn6rJqtByZryXBkHqwv.jpg' },
-    { id: 26, title: 'Society of the Snow', year: 2024, img: 'https://image.tmdb.org/t/p/w400/2e853FDVSIso600RqAMunPxiZjq.jpg' },
-    { id: 27, title: 'Fallen Leaves', year: 2023, img: 'https://image.tmdb.org/t/p/w400/thQjvXFEDxoq3xNNKOFTuaZcJj4.jpg' },
-    { id: 30, title: 'The Zone of Interest', year: 2024, img: 'https://image.tmdb.org/t/p/w400/hUu9zyZmKDWfZLBFAJkXBaVzMon.jpg' },
-    { id: 31, title: 'All of Us Strangers', year: 2024, img: 'https://image.tmdb.org/t/p/w400/uB7CtWs7LGa5ePXiogVQwqvU6Kc.jpg' },
-    { id: 32, title: 'Dune: Part Two', year: 2024, img: 'https://image.tmdb.org/t/p/w400/1pdfLvkbY9ohJlCjQH2CZjjYVvJ.jpg' },
-    { id: 33, title: 'The Holdovers', year: 2023, img: 'https://image.tmdb.org/t/p/w400/VelWPhVMzDwhXqJMQNBEzTMSNAt.jpg' },
+    { id: 20, title: 'Godzilla Minus One', year: 2023, img: 'https://image.tmdb.org/t/p/w500/hkxxMIGaiCTmrEArK7J56rvbJqd.jpg' },
+    { id: 21, title: 'Poor Things', year: 2023, img: 'https://image.tmdb.org/t/p/w500/kCGlIMHnOm8JPXNGFlkFqDjJFuk.jpg' },
+    { id: 22, title: 'Killers of the Flower Moon', year: 2023, img: 'https://image.tmdb.org/t/p/w500/dB6Krk806zeqd917HIxyentriBw.jpg' },
+    { id: 23, title: 'Anatomy of a Fall', year: 2023, img: 'https://image.tmdb.org/t/p/w500/qGGEKTiN9U06SAOLM8h2Kq6B5rk.jpg' },
+    { id: 24, title: 'Oppenheimer', year: 2023, img: 'https://image.tmdb.org/t/p/w500/nTvM4mhqNlHIvUkI1gVnW6XP7GG.jpg' },
+    { id: 25, title: 'Saltburn', year: 2023, img: 'https://image.tmdb.org/t/p/w500/qjhahqZcsn6rJqtByZryXBkHqwv.jpg' },
+    { id: 26, title: 'Society of the Snow', year: 2024, img: 'https://image.tmdb.org/t/p/w500/2e853FDVSIso600RqAMunPxiZjq.jpg' },
+    { id: 27, title: 'Fallen Leaves', year: 2023, img: 'https://image.tmdb.org/t/p/w500/thQjvXFEDxoq3xNNKOFTuaZcJj4.jpg' },
+    { id: 30, title: 'The Zone of Interest', year: 2024, img: 'https://image.tmdb.org/t/p/w500/hUu9zyZmKDWfZLBFAJkXBaVzMon.jpg' },
+    { id: 31, title: 'All of Us Strangers', year: 2024, img: 'https://image.tmdb.org/t/p/w500/uB7CtWs7LGa5ePXiogVQwqvU6Kc.jpg' },
+    { id: 32, title: 'Dune: Part Two', year: 2024, img: 'https://image.tmdb.org/t/p/w500/1pdfLvkbY9ohJlCjQH2CZjjYVvJ.jpg' },
+    { id: 33, title: 'The Holdovers', year: 2023, img: 'https://image.tmdb.org/t/p/w500/VelWPhVMzDwhXqJMQNBEzTMSNAt.jpg' },
 ]
 
 const FILTERS = ['All', 'Action', 'Drama', 'Sci-Fi', 'Comedy', 'Thriller']

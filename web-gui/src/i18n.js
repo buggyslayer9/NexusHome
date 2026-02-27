@@ -8,6 +8,9 @@ const resources = {
             movies: 'Movies', shows: 'TV Shows', music: 'Music',
             liveTV: 'Live TV', marketplace: 'Marketplace',
             settings: 'Settings', dashboard: 'Dashboard',
+            continueWatching: 'Continue Watching',
+            trendingNow: 'Trending Now',
+            recentlyAdded: 'Recently Added'
         }
     },
     ar: {
